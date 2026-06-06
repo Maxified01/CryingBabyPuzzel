@@ -10,9 +10,11 @@ public class PickupMilk : MonoBehaviour
         {
             hasMilk = true;
 
-            Destroy(other.gameObject);
+            AudioManager.Instance.PlayMilkSound();
 
             Debug.Log("Milk Picked Up!");
+
+            Destroy(other.gameObject);
         }
     }
 }
